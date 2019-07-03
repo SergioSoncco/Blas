@@ -1,0 +1,176 @@
+<?php
+/**
+ * CakePHP(tm) : Rapid Development Framework (https://cakephp.org)
+ * Copyright (c) Cake Software Foundation, Inc. (https://cakefoundation.org)
+ *
+ * Licensed under The MIT License
+ * For full copyright and license information, please see the LICENSE.txt
+ * Redistributions of files must retain the above copyright notice.
+ *
+ * @copyright     Copyright (c) Cake Software Foundation, Inc. (https://cakefoundation.org)
+ * @link          https://cakephp.org CakePHP(tm) Project
+ * @since         0.10.0
+ * @license       https://opensource.org/licenses/mit-license.php MIT License
+ */
+
+$cakeDescription = 'Colegio Particular Mixto Blas Pascal';
+?>
+<!DOCTYPE html>
+<html>
+<!-- Basic -->
+
+
+
+<head>
+    <?= $this->Html->charset() ?>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <?= $cakeDescription ?>:
+        <?= $this->fetch('title') ?>
+    </title>
+    <?= $this->Html->meta('icon') ?>
+
+
+  
+ 
+    <!-- Bootstrap CSS -->
+    <?= $this->Html->css('bootstrap.min.css') ?>
+    <!-- Site CSS -->
+  <?= $this->Html->css('my_style.css') ?>
+    <!-- ALL VERSION CSS -->
+    <?= $this->Html->css('versions.css')?>
+    <!-- Responsive CSS -->
+    <?= $this->Html->css('responsive.css')?>
+    <!-- Custom CSS -->
+    <?= $this->Html->css('custom.css')?>
+
+
+
+    <?= $this->fetch('meta') ?>
+    <?= $this->fetch('css') ?>
+    <?= $this->fetch('script') ?>
+</head>
+<body class="host_version"> 
+    <!-- Start header -->
+    <header class="top-navbar">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">
+                    <img src="img/logo.png" alt="" />
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars-host" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbars-host">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active"><a class="nav-link" href="Home</a></li>
+                        <li class="nav-item"><a class="nav-link" >
+ 
+                            <?php 
+                                echo $this->Html->link(
+                                    __('Users'),
+                                    ['controller'=>'Users','action'=>'index','_full'=>true]
+                                );
+                            ?>
+
+
+                        </li>
+                        <li class="nav-item active"><a class="nav-link">
+                             <?php
+                            echo $this->Html->link(
+                                    __('Teachers'),
+                                    ['controller'=>'Teachers','action'=>'index','_full'=>true]
+                                );
+                            ?>
+                            
+                        </li>
+                        <li class="nav-item">
+                             <?php
+                            echo $this->Html->link(
+                                    __('Students'),
+                                    ['controller'=>'Students','action'=>'index','_full'=>true]
+                                );
+                            ?>
+                        </li>
+                        <li class="nav-item">
+                            <?php
+                            echo $this->Html->link(
+                                    __('Subjects'),
+                                    ['controller'=>'Subjects','action'=>'index','_full'=>true]
+                                );
+                            ?>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="#">Comunicados</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                             <?php
+
+                            if( is_null($this->request->getSession()->read('Auth.User')))
+                            {
+                                echo $this->Html->link(
+                                    __('Login'),
+                                    ['controller'=>'Users','action'=>'login','_full'=>true]
+                                );
+
+                            }else{
+                                echo $this->Html->link(
+                                    __('Logout'),
+                                    ['controller'=>'Users','action'=>'logout','_full'=>true]
+                                );
+                                }
+
+                            ?>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- End header -->
+<body>
+
+
+
+
+<body>
+
+
+    <?= $this->Flash->render() ?>
+    <?= $this->fetch('content') ?>
+
+     <footer class="footer">
+       <h3>AQUI VA A ENTRAR ALGO </h3>
+
+    </footer><!-- end footer -->
+
+    <div class="copyrights">
+        <div class="container">
+            <div class="footer-distributed">
+                <div class="footer-center">                   
+                    <p class="footer-company-name">All Rights Reserved. &copy; 2018 <a href="#">SmartEDU</a> Design By : <a href="https://html.design/">html design</a></p>
+                </div>
+            </div>
+        </div><!-- end container -->
+    </div><!-- end copyrights -->
+
+    <a href="#" id="scroll-to-top" class="dmtop global-radius"><i class="fa fa-angle-up"></i></a>
+
+    <!-- ALL JS FILES -->
+    <script src="js/all.js"></script>
+    <!-- ALL PLUGINS -->
+    <script src="js/custom.js"></script>
+    <script src="js/timeline.min.js"></script>
+    <script>
+        timeline(document.querySelectorAll('.timeline'), {
+            forceVerticalMode: 700,
+            mode: 'horizontal',
+            verticalStartPosition: 'left',
+            visibleItems: 4
+        });
+    </script>
+   
+</body>
+</html>

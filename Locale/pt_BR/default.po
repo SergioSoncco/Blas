@@ -1,0 +1,110 @@
+msgid "Contact Details"
+msgstr "Entre em contato"
+
+msgid "List Users"
+msgstr "Lista de usuários"
+
+msgid "List Administs"
+msgstr "Lista Administrativa"
+
+msgid "List Students"
+msgstr "Lista de alunos"
+
+msgid "List Teachers"
+msgstr "Lista de professores"
+
+msgid "About US"
+msgstr "Sobre BLAS PASCAL"
+
+msgid "You want to be:"
+msgstr "Se você quer ser:"
+
+msgid "* A professional leader."
+msgstr "Um líder profissional."
+
+msgid "* A Winner of contests."
+msgstr "* Um vencedor do concurso."
+
+msgid "* Enter the university before finishing school."
+msgstr "Entre na universidade antes de terminar a escola."
+
+msgid "* Have a high intellectual and emotional level."
+msgstr "Tenha um alto nível intelectual e emocional."
+
+msgid ""COME TO THE BLAS AND YOU WILL ACHIEVE""
+msgstr "Venha para o BLAS e você fará"
+
+msgid "Blas Pascal Mixed Private School"
+msgstr "Escola Particular Mista Blas Pascal"
+
+msgid "The best school for your children"
+msgstr "A MELHOR ESCOLA PARA SUAS CRIANÇAS"
+
+msgid "The best school for your sons"
+msgstr "A MELHOR ESCOLA PARA SUAS CRIANÇAS"
+
+msgid "Mixed Private School"
+msgstr "A MELHOR ESCOLA PARA SUAS CRIANÇAS"
+
+msgid "Students"
+msgstr "Estudantes"
+
+msgid "Teachers"
+msgstr "Professores"
+
+msgid "Administs"
+msgstr "Administrativo"
+
+msgid "Home"
+msgstr "Lar"
+
+msgid "Login"
+msgstr "Iniciar sessão"
+
+msgid "Password"
+msgstr "Senha"
+
+msgid "enter another captcha"
+msgstr "insira outro captcha"
+
+msgid "List Subjects"
+msgstr "Lista de cursos"
+
+msgid "List Levels"
+msgstr "Lista de níveis"
+
+msgid "Users"
+msgstr "Usuario"
+
+msgid "Logout"
+msgstr "Fechar Sessão"
+
+msgid "Names"
+msgstr "Nomes"
+
+msgid "Surnames"
+msgstr "sobrenomes"
+
+msgid "Role"
+msgstr "Papel"
+
+msgid "Username"
+msgstr "Nome de usuario"
+
+msgid "Actions"
+msgstr "Aaçõeses"
+
+msgid "View"
+msgstr "Ver"
+
+msgid "Status"
+msgstr "Status"
+
+msgid "Edit"
+msgstr "Editar"
+
+msgid "Delete"
+msgstr "Excluir"
+
+msgid "Number of users per level"
+msgstr "N�mero de usu�rios por n�vel"

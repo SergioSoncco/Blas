@@ -1,0 +1,309 @@
+<?php
+/**
+ * @var \App\View\AppView $this
+ * @var \App\Model\Entity\User $user
+ */
+?>
+<nav class="large-3 medium-4 columns" id="actions-sidebar">
+    <ul class="side-nav">
+        <li class="heading"><?= __('Actions') ?></li>
+        <li><?= $this->Html->link(__('List Users'), ['action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('List Administs'), ['controller' => 'Administs', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('List Students'), ['controller' => 'Students', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('New Student'), ['controller' => 'Students', 'action' => 'add']) ?></li>
+        <li><?= $this->Html->link(__('List Teachers'), ['controller' => 'Teachers', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('New Teacher'), ['controller' => 'Teachers', 'action' => 'add']) ?></li>
+    </ul>
+</nav>
+<div class="users view large-9 medium-8 columns content">
+    <h3><?= h($user->user_id) ?></h3>
+    <table class="vertical-table">
+        <tr>
+            <th scope="row"><?= __('Username') ?></th>
+            <td><?= h($user->username) ?></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('Password') ?></th>
+            <td><?= h($user->password) ?></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('Names') ?></th>
+            <td><?= h($user->names) ?></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('Surnames') ?></th>
+            <td><?= h($user->surnames) ?></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('Email') ?></th>
+            <td><?= h($user->email) ?></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('Id') ?></th>
+            <td><?= $this->Number->format($user->id) ?></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('Role') ?></th>
+            <td><?= $this->Number->format($user->role) ?></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('DNI') ?></th>
+            <td><?= $this->Number->format($user->DNI) ?></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('Phone Number') ?></th>
+            <td><?= $this->Number->format($user->phone_number) ?></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('Birthday') ?></th>
+            <td><?= h($user->birthday) ?></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('Created') ?></th>
+            <td><?= h($user->created) ?></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('Modified') ?></th>
+            <td><?= h($user->modified) ?></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('Status') ?></th>
+            <td><?= $user->status ? __('Yes') : __('No'); ?></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('Gender') ?></th>
+            <td><?= $user->gender ? __('Yes') : __('No'); ?></td>
+        </tr>
+    </table>
+    <div class="row">
+        <h4><?= __('Address') ?></h4>
+        <?= $this->Text->autoParagraph(h($user->address)); ?>
+    </div>
+    <div class="related">
+        <h4><?= __('Related Administs') ?></h4>
+        <?php if (!empty($user->administs)): ?>
+        <table cellpadding="0" cellspacing="0">
+            <tr>
+                <th scope="col"><?= __('Administ Id') ?></th>
+                <th scope="col"><?= __('User Id') ?></th>
+                <th scope="col"><?= __('Created') ?></th>
+                <th scope="col"><?= __('Modified') ?></th>
+                <th scope="col" class="actions"><?= __('Actions') ?></th>
+            </tr>
+            <?php foreach ($user->administs as $administs): ?>
+            <tr>
+                <td><?= h($administs->administ_id) ?></td>
+                <td><?= h($administs->user_id) ?></td>
+                <td><?= h($administs->created) ?></td>
+                <td><?= h($administs->modified) ?></td>
+                <td class="actions">
+                    <?= $this->Html->link(__('View'), ['controller' => 'Administs', 'action' => 'view', $administs->administ_id]) ?>
+                    <?= $this->Html->link(__('Edit'), ['controller' => 'Administs', 'action' => 'edit', $administs->administ_id]) ?>
+                    <?= $this->Form->postLink(__('Delete'), ['controller' => 'Administs', 'action' => 'delete', $administs->administ_id], ['confirm' => __('Are you sure you want to delete # {0}?', $administs->administ_id)]) ?>
+                </td>
+            </tr>
+            <?php endforeach; ?>
+        </table>
+        <?php endif; ?>
+    </div>
+    <div class="related">
+        <h4><?= __('Related Articles') ?></h4>
+        <?php if (!empty($user->articles)): ?>
+        <table cellpadding="0" cellspacing="0">
+            <tr>
+                <th scope="col"><?= __('Id') ?></th>
+                <th scope="col"><?= __('User Id') ?></th>
+                <th scope="col"><?= __('Title') ?></th>
+                <th scope="col"><?= __('Slug') ?></th>
+                <th scope="col"><?= __('Body') ?></th>
+                <th scope="col"><?= __('Published') ?></th>
+                <th scope="col"><?= __('Created') ?></th>
+                <th scope="col"><?= __('Modified') ?></th>
+                <th scope="col" class="actions"><?= __('Actions') ?></th>
+            </tr>
+            <?php foreach ($user->articles as $articles): ?>
+            <tr>
+                <td><?= h($articles->id) ?></td>
+                <td><?= h($articles->user_id) ?></td>
+                <td><?= h($articles->title) ?></td>
+                <td><?= h($articles->slug) ?></td>
+                <td><?= h($articles->body) ?></td>
+                <td><?= h($articles->published) ?></td>
+                <td><?= h($articles->created) ?></td>
+                <td><?= h($articles->modified) ?></td>
+                <td class="actions">
+                    <?= $this->Html->link(__('View'), ['controller' => 'Articles', 'action' => 'view', $articles->id]) ?>
+                    <?= $this->Html->link(__('Edit'), ['controller' => 'Articles', 'action' => 'edit', $articles->id]) ?>
+                    <?= $this->Form->postLink(__('Delete'), ['controller' => 'Articles', 'action' => 'delete', $articles->id], ['confirm' => __('Are you sure you want to delete # {0}?', $articles->id)]) ?>
+                </td>
+            </tr>
+            <?php endforeach; ?>
+        </table>
+        <?php endif; ?>
+    </div>
+    <div class="related">
+        <h4><?= __('Related Operations') ?></h4>
+        <?php if (!empty($user->operations)): ?>
+        <table cellpadding="0" cellspacing="0">
+            <tr>
+                <th scope="col"><?= __('Id') ?></th>
+                <th scope="col"><?= __('First Operator') ?></th>
+                <th scope="col"><?= __('Second Operator') ?></th>
+                <th scope="col"><?= __('Operation') ?></th>
+                <th scope="col"><?= __('Result') ?></th>
+                <th scope="col"><?= __('User Id') ?></th>
+                <th scope="col" class="actions"><?= __('Actions') ?></th>
+            </tr>
+            <?php foreach ($user->operations as $operations): ?>
+            <tr>
+                <td><?= h($operations->id) ?></td>
+                <td><?= h($operations->first_operator) ?></td>
+                <td><?= h($operations->second_operator) ?></td>
+                <td><?= h($operations->operation) ?></td>
+                <td><?= h($operations->result) ?></td>
+                <td><?= h($operations->user_id) ?></td>
+                <td class="actions">
+                    <?= $this->Html->link(__('View'), ['controller' => 'Operations', 'action' => 'view', $operations->id]) ?>
+                    <?= $this->Html->link(__('Edit'), ['controller' => 'Operations', 'action' => 'edit', $operations->id]) ?>
+                    <?= $this->Form->postLink(__('Delete'), ['controller' => 'Operations', 'action' => 'delete', $operations->id], ['confirm' => __('Are you sure you want to delete # {0}?', $operations->id)]) ?>
+                </td>
+            </tr>
+            <?php endforeach; ?>
+        </table>
+        <?php endif; ?>
+    </div>
+    <div class="related">
+        <h4><?= __('Related Students') ?></h4>
+        <?php if (!empty($user->students)): ?>
+        <table cellpadding="0" cellspacing="0">
+            <tr>
+                <th scope="col"><?= __('Student Id') ?></th>
+                <th scope="col"><?= __('User Id') ?></th>
+                <th scope="col"><?= __('Level') ?></th>
+                <th scope="col"><?= __('Created') ?></th>
+                <th scope="col"><?= __('Modified') ?></th>
+                <th scope="col" class="actions"><?= __('Actions') ?></th>
+            </tr>
+            <?php foreach ($user->students as $students): ?>
+            <tr>
+                <td><?= h($students->student_id) ?></td>
+                <td><?= h($students->user_id) ?></td>
+                <td><?= h($students->level) ?></td>
+                <td><?= h($students->created) ?></td>
+                <td><?= h($students->modified) ?></td>
+                <td class="actions">
+                    <?= $this->Html->link(__('View'), ['controller' => 'Students', 'action' => 'view', $students->student_id]) ?>
+                    <?= $this->Html->link(__('Edit'), ['controller' => 'Students', 'action' => 'edit', $students->student_id]) ?>
+                    <?= $this->Form->postLink(__('Delete'), ['controller' => 'Students', 'action' => 'delete', $students->student_id], ['confirm' => __('Are you sure you want to delete # {0}?', $students->student_id)]) ?>
+                </td>
+            </tr>
+            <?php endforeach; ?>
+        </table>
+        <?php endif; ?>
+    </div>
+    <div class="related">
+        <h4><?= __('Related Teachers') ?></h4>
+        <?php if (!empty($user->teachers)): ?>
+        <table cellpadding="0" cellspacing="0">
+            <tr>
+                <th scope="col"><?= __('Teacher Id') ?></th>
+                <th scope="col"><?= __('User Id') ?></th>
+                <th scope="col"><?= __('Created') ?></th>
+                <th scope="col"><?= __('Modified') ?></th>
+                <th scope="col" class="actions"><?= __('Actions') ?></th>
+            </tr>
+            <?php foreach ($user->teachers as $teachers): ?>
+            <tr>
+                <td><?= h($teachers->teacher_id) ?></td>
+                <td><?= h($teachers->user_id) ?></td>
+                <td><?= h($teachers->created) ?></td>
+                <td><?= h($teachers->modified) ?></td>
+                <td class="actions">
+                    <?= $this->Html->link(__('View'), ['controller' => 'Teachers', 'action' => 'view', $teachers->teacher_id]) ?>
+                    <?= $this->Html->link(__('Edit'), ['controller' => 'Teachers', 'action' => 'edit', $teachers->teacher_id]) ?>
+                    <?= $this->Form->postLink(__('Delete'), ['controller' => 'Teachers', 'action' => 'delete', $teachers->teacher_id], ['confirm' => __('Are you sure you want to delete # {0}?', $teachers->teacher_id)]) ?>
+                </td>
+            </tr>
+            <?php endforeach; ?>
+        </table>
+        <?php endif; ?>
+    </div>
+    <div class="related">
+        <h4><?= __('Related Uss') ?></h4>
+        <?php if (!empty($user->uss)): ?>
+        <table cellpadding="0" cellspacing="0">
+            <tr>
+                <th scope="col"><?= __('User Id') ?></th>
+                <th scope="col"><?= __('Username') ?></th>
+                <th scope="col"><?= __('Password') ?></th>
+                <th scope="col"><?= __('Status') ?></th>
+                <th scope="col"><?= __('Created') ?></th>
+                <th scope="col"><?= __('Modified') ?></th>
+                <th scope="col" class="actions"><?= __('Actions') ?></th>
+            </tr>
+            <?php foreach ($user->uss as $uss): ?>
+            <tr>
+                <td><?= h($uss->user_id) ?></td>
+                <td><?= h($uss->username) ?></td>
+                <td><?= h($uss->password) ?></td>
+                <td><?= h($uss->status) ?></td>
+                <td><?= h($uss->created) ?></td>
+                <td><?= h($uss->modified) ?></td>
+                <td class="actions">
+                    <?= $this->Html->link(__('View'), ['controller' => 'Uss', 'action' => 'view', $uss->user_id]) ?>
+                    <?= $this->Html->link(__('Edit'), ['controller' => 'Uss', 'action' => 'edit', $uss->user_id]) ?>
+                    <?= $this->Form->postLink(__('Delete'), ['controller' => 'Uss', 'action' => 'delete', $uss->user_id], ['confirm' => __('Are you sure you want to delete # {0}?', $uss->user_id)]) ?>
+                </td>
+            </tr>
+            <?php endforeach; ?>
+        </table>
+        <?php endif; ?>
+    </div>
+    <div class="related">
+        <h4><?= __('Related Uss1') ?></h4>
+        <?php if (!empty($user->uss1)): ?>
+        <table cellpadding="0" cellspacing="0">
+            <tr>
+                <th scope="col"><?= __('User Id') ?></th>
+                <th scope="col"><?= __('Username') ?></th>
+                <th scope="col"><?= __('Password') ?></th>
+                <th scope="col"><?= __('Status') ?></th>
+                <th scope="col"><?= __('Names') ?></th>
+                <th scope="col"><?= __('Surnames') ?></th>
+                <th scope="col"><?= __('DNI') ?></th>
+                <th scope="col"><?= __('Gender') ?></th>
+                <th scope="col"><?= __('Phone Number') ?></th>
+                <th scope="col"><?= __('Email') ?></th>
+                <th scope="col"><?= __('Address') ?></th>
+                <th scope="col"><?= __('Role') ?></th>
+                <th scope="col"><?= __('Created') ?></th>
+                <th scope="col"><?= __('Modified') ?></th>
+                <th scope="col" class="actions"><?= __('Actions') ?></th>
+            </tr>
+            <?php foreach ($user->uss1 as $uss1): ?>
+            <tr>
+                <td><?= h($uss1->user_id) ?></td>
+                <td><?= h($uss1->username) ?></td>
+                <td><?= h($uss1->password) ?></td>
+                <td><?= h($uss1->status) ?></td>
+                <td><?= h($uss1->names) ?></td>
+                <td><?= h($uss1->surnames) ?></td>
+                <td><?= h($uss1->DNI) ?></td>
+                <td><?= h($uss1->gender) ?></td>
+                <td><?= h($uss1->phone_number) ?></td>
+                <td><?= h($uss1->email) ?></td>
+                <td><?= h($uss1->address) ?></td>
+                <td><?= h($uss1->role) ?></td>
+                <td><?= h($uss1->created) ?></td>
+                <td><?= h($uss1->modified) ?></td>
+                <td class="actions">
+                    <?= $this->Html->link(__('View'), ['controller' => 'Uss1', 'action' => 'view', $uss1->user_id]) ?>
+                    <?= $this->Html->link(__('Edit'), ['controller' => 'Uss1', 'action' => 'edit', $uss1->user_id]) ?>
+                    <?= $this->Form->postLink(__('Delete'), ['controller' => 'Uss1', 'action' => 'delete', $uss1->user_id], ['confirm' => __('Are you sure you want to delete # {0}?', $uss1->user_id)]) ?>
+                </td>
+            </tr>
+            <?php endforeach; ?>
+        </table>
+        <?php endif; ?>
+    </div>
+</div>

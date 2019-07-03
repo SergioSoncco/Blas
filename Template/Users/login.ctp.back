@@ -1,0 +1,16 @@
+<!-- include the BotDetect layout stylesheet --> 
+<?= $this->Html->css(captcha_layout_stylesheet_url(), ['inline' => false]) ?> 
+ 
+ 
+<h1>Login</h1>
+<?= $this->Form->create() ?>
+<?= $this->Form->control('username') ?>
+<?= $this->Form->control('password') ?>
+
+ 
+ 
+
+
+<?= $this->Form->button('Login') ?>
+<?= $this->Form->end() ?>
+</script>

@@ -1,0 +1,164 @@
+msgid "Contact Details"
+msgstr "Contactenos"
+
+msgid "List Users"
+msgstr "Lista Usuarios"
+
+msgid "List Administs"
+msgstr "Lista Administrativos"
+
+msgid "List Students"
+msgstr "Lista Estudiantes"
+
+msgid "List Teachers"
+msgstr "Lista Profesores"
+
+msgid "About US"
+msgstr "Acerca de" 
+
+msgid "You want to be:"
+msgstr "Si quieres ser:"
+
+msgid "* A professional leader."
+msgstr "* Un lider profesional."
+
+msgid "* A Winner of contests."
+msgstr "* Un ganador de concursos."
+
+msgid "* Enter the university before finishing school."
+msgstr "* Ingresar a la universidad antes de terminar el colegio."
+
+msgid "* Have a high intellectual and emotional level."
+msgstr "* Tener un alto nivel intelectual y emocional."
+
+msgid ""COME TO THE BLAS AND YOU WILL ACHIEVE""
+msgstr "Ven a la BLAS y lo lograras"
+
+msgid "Blas Pascal Mixed Private School"
+msgstr "Colegio Particular Mixto Blas Pascal"
+
+msgid "The best school for your sons" 
+msgstr "EL mejor colegio para sus hijos""
+
+msgid "Mixed Private School"
+msgstr "Colegio Particular Mixto"
+
+msgid "Password"
+msgstr "Contraseña"
+
+msgid "Home"
+msgstr "Inicio"
+
+msgid "Administs"
+msgstr "Administradores"
+
+msgid "Teachers"
+msgstr "Profesores"
+
+msgid "Students"
+msgstr "Alumnos"
+
+msgid "Notices"
+msgstr "Comunicados"
+
+msgid "Users"
+msgstr "Usuarios"
+
+msgid "User"
+msgstr "Usuario"
+
+msgid "Login"
+msgstr "Iniciar Sesion"
+
+msgid "Logout"
+msgstr "Cerrar Sesion"
+
+msgid "Names"
+msgstr "Nombres"
+
+msgid "Surnames"
+msgstr "Apellidos"
+
+msgid "Role"
+msgstr "Rol"
+
+msgid "Username"
+msgstr "Nombre de Usuario"
+
+
+msgid "Actions"
+msgstr "Acciones"
+
+msgid "View"
+msgstr "Ver"
+
+msgid "Status"
+msgstr "Estado"
+
+msgid "Edit"
+msgstr "Editar"
+
+msgid "Delete"
+msgstr "Borrar"
+
+msgid "Phone Number"
+msgstr "Número Telefónico"
+
+msgid "Birthday"
+msgstr "Fecha de Nacimiento"
+
+msgid "Gender"
+msgstr "Género"
+
+msgid "Feminine"
+msgstr "Femenino"
+
+msgid "Masculine"
+msgstr "Masculino"
+
+msgid "Address"
+msgstr "Dirección"
+
+msgid "Created"
+msgstr "Fecha de Creación"
+
+msgid "Email"
+msgstr "Correo Electrónico"
+
+msgid "Modified"
+msgstr "Fecha de Modificación"
+
+msgid "New User"
+msgstr "Nuevo Usuario"
+
+msgid "List Users"
+msgstr "Lista de Usuarios"
+
+msgid "List Administs"
+msgstr "Lista de Administradores"
+
+msgid "List Students"
+msgstr "Lista de Alumnos"
+
+msgid "List Teachers"
+msgstr "Lista de Profesores"
+
+msgid "List Subjects"
+msgstr " Lista Cursos"
+
+msgid " List Levels"
+msgstr "Lista de Niveles"
+
+msgid "Related Administ"
+msgstr "Administrador Relacionado"
+
+msgid "Related Teacher"
+msgstr "Profesor Relacionado"
+
+msgid "Related Student"
+msgstr "Alumno Relacionado"
+
+msgid "Number of users per level"
+msgstr "Numero de usuarios por nivel"
+
+
